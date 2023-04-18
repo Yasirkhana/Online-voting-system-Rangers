@@ -19,4 +19,10 @@
   <h2>License</h2>
   <p>This project is licensed under the MIT License - see the <a href="LICENSE.md">LICENSE.md</a> file for details.</p>
   <h2>Acknowledgments</h2>
-  <p>Special thanks to <a href="https://openai.com/">OpenAI</a> for providing the language model used to create this README file.</p>
+  
+  
+  <h1> GROUP MEMBERS </h1>
+  <h3> YASIR AHMAD (khan10055yasir@gmail.com) </h3>
+  <h3> SHAROZE SHAFIQ (sharozshafiq24@gmail.com) </h3>
+  <h3> MANIK TARANI (manik.tarani@gmail.com)</h3>
+
