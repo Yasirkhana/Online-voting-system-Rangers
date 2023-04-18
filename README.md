@@ -18,7 +18,7 @@
   <p>Contributions to the project are always welcome. If you find any bugs or issues, please open an issue on GitHub or submit a pull request with your proposed changes.</p>
   <h2>License</h2>
   <p>This project is licensed under the MIT License - see the <a href="LICENSE.md">LICENSE.md</a> file for details.</p>
-  <h2>Acknowledgments</h2>
+
   
   
   <h1> GROUP MEMBERS </h1>
