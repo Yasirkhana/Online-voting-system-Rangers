@@ -112,7 +112,6 @@ const SignIn  = ()=>{
             <p style={{fontFamily:"Raleway",textAlign:"center",fontSize:"17px",fontWeight:"500",marginTop:"20px"}}>
                Not Register ? <Link to="/signup" style={{color:"grey",fontWeight:"700"}}>Register here</Link>
             </p>
-    
         </div>
         </div>
       
@@ -121,6 +120,4 @@ const SignIn  = ()=>{
       </div>
    )
 }
-
-
 export default SignIn
