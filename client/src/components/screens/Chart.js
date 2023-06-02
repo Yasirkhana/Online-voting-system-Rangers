@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import {Bar,Line,Pie} from 'react-chartjs-2';
+import {url} from '../utils/Url'
+
 const Chart = () => {
    // const [data,setData]= useState([]);
 
@@ -21,9 +23,8 @@ const Chart = () => {
                 }
               ]
     )
-
     useEffect(()=>{
-        fetch('http://localhost:5000/allpost',{
+        fetch(url+'allpost',{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
@@ -44,8 +45,6 @@ const Chart = () => {
     
   return (
         <div>
-
-        
         <div style={{height:"400px",width:"60%",marginBottom:"50px",marginTop:"50px",marginLeft:"20%"}}>
           <Pie
             data={statedata}

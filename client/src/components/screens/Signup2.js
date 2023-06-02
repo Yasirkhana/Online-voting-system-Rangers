@@ -2,6 +2,8 @@ import React,{useState,useEffect} from 'react'
 import {Link,useHistory} from 'react-router-dom'
 import { sName,bName } from '../utils'
 import M from 'materialize-css'
+import {url} from '../utils/Url'
+
 const SignUp  = ()=>{
     const history = useHistory()
     const [firstname,setFirstName] = useState("")
@@ -43,7 +45,7 @@ const SignUp  = ()=>{
         }
         // const obj = {firstname,lastname,password,email,city,stateName,mobile,branch,pic:url}
         // console.log(obj)
-        fetch("http://localhost:5000/signup",{
+        fetch(url+"signup",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"
