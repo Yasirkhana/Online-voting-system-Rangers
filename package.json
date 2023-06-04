@@ -17,5 +17,8 @@
     "mongoose": "^5.9.10",
     "nodemailer": "^6.9.2",
     "nodemailer-sendgrid-transport": "^0.2.0"
+  },
+  "devDependencies": {
+    "react-test-renderer": "^18.2.0"
   }
 }

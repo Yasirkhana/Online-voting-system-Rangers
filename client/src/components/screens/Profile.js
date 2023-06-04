@@ -1,8 +1,11 @@
 import React,{useEffect} from 'react';
 import { useHistory} from 'react-router-dom'
+import {url} from '../utils/Url'
+
 const Profile = () => {
     const history = useHistory();
 
+    //Get user from the localStorage and set userInfomation
     const userInfor =JSON.parse(localStorage.getItem("user"));
   
       

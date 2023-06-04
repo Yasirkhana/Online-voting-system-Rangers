@@ -1,6 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import {Link,useHistory} from 'react-router-dom'
 import M from 'materialize-css'
+import {url} from '../utils/Url'
+
+
+
 const SignUp  = ()=>{
     const history = useHistory()
     const [name,setName] = useState("")
@@ -10,24 +14,27 @@ const SignUp  = ()=>{
     const [mobile,setMobile] = useState("")
     const [branch,setBranch] = useState("")
     const [image,setImage] = useState("")
-    const [url,setUrl] = useState(undefined)
+    const [urls,setUrls] = useState(undefined)
     useEffect(()=>{
-        if(url){
+        if(urls){
             uploadFields()
         }
-    },[url])
+    },[urls])
     const uploadPic = () => {
+        // Create a FormData object and append image data, upload preset, and cloud name
         const data = new FormData();
         data.append("file", image);
         data.append("upload_preset", "voting");
         data.append("cloud_name", "dvfpkko1z");
+        // Send a POST request to Cloudinary API to upload the image
         fetch("https://api.cloudinary.com/v1_1/dvfpkko1z/image/upload", {
           method: "post",
           body: data,
         })
           .then((res) => res.json())
           .then((data) => {
-            setUrl(data.url);
+            // Set the URL of the uploaded image
+            setUrls(data.urls);
           })
           .catch((err) => {
             console.log(err);
@@ -38,7 +45,9 @@ const SignUp  = ()=>{
             M.toast({html: "invalid email",classes:"#c62828 red darken-3"})
             return
         }
-        fetch("http://localhost:5000/signup",{
+// Makes a POST request to the specified URL with user signup data 
+//handles the response, and displays appropriate messages
+fetch(url+"signup",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"
@@ -48,7 +57,7 @@ const SignUp  = ()=>{
                 password,
                 email,
                 mobile,city,branch,
-                pic:url
+                pic:urls
             })
         }).then(res=>res.json())
         .then(data=>{

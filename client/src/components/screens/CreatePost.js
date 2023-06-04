@@ -1,13 +1,14 @@
 import React,{useState,useEffect} from 'react'
 import M from 'materialize-css'
 import {useHistory} from 'react-router-dom'
+import {url} from '../utils/Url'
 
-
+    // Fetch all posts from the server and set the data using the result
 const CretePost = ()=>{
     const [data,setData] = useState([])
   
     useEffect(()=>{
-       fetch('http://localhost:5000/posts',{
+       fetch(url+'posts',{
          
        }).then(res=>res.json())
        .then(result=>{

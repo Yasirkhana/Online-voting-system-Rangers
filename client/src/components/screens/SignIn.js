@@ -5,6 +5,8 @@ import {UserContext} from '../../App'
 import Posts from "./Posts";
 import M from 'materialize-css'
 import Image from "../../Image/Capture.JPG"
+import {url} from '../utils/Url'
+
 
 
 const SignIn  = ()=>{
@@ -14,11 +16,13 @@ const SignIn  = ()=>{
     const [email,setEmail] = useState("")
     const[userItem,setuserItem]=useState("")
     const PostData = ()=>{
+        //checks the validity of the email entered by the user
         if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
             M.toast({html: "invalid email",classes:"#c62828 red darken-3"})
             return
         }
-        fetch("http://localhost:5000/signin",{
+        //handling the sign-in functionality and managing the authentication state 
+        fetch(url+"signin",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"
@@ -108,7 +112,6 @@ const SignIn  = ()=>{
             <p style={{fontFamily:"Raleway",textAlign:"center",fontSize:"17px",fontWeight:"500",marginTop:"20px"}}>
                Not Register ? <Link to="/signup" style={{color:"grey",fontWeight:"700"}}>Register here</Link>
             </p>
-    
         </div>
         </div>
       
@@ -117,6 +120,4 @@ const SignIn  = ()=>{
       </div>
    )
 }
-
-
 export default SignIn

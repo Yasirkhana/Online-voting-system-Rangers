@@ -4,12 +4,16 @@ import {UserContext} from '../../App'
 import {Link} from 'react-router-dom'
 import Chart from "./Chart";
 import Profile from "./Profile";
+import {url} from '../utils/Url'
+
 
 const Home  = ()=>{
     const [data,setData] = useState([])
     const {state,dispatch} = useContext(UserContext)
+
+    // Fetch all posts from the server and set the data using the result
     useEffect(()=>{
-       fetch('http://localhost:5000/allpost',{
+       fetch(url+'allpost',{
            headers:{
                "Authorization":"Bearer "+localStorage.getItem("jwt")
            }
@@ -20,6 +24,7 @@ const Home  = ()=>{
        })
     },[])
 
+    // Function to handle player voting and update the data accordingly
     const votePlayer = (id,userId)=>{
         swal({
             title: "Are you sure?",
@@ -64,6 +69,7 @@ const Home  = ()=>{
          
     }
    
+    // check if a user is present in the localStorage 
     let isVote ; 
     if(JSON.parse(localStorage.getItem("user")) !== null){
         isVote = JSON.parse(localStorage.getItem("user"))._id;
@@ -71,6 +77,7 @@ const Home  = ()=>{
    
     const userId = JSON.parse(localStorage.getItem("user")) ?  JSON.parse(localStorage.getItem("user"))._id : null ;
  
+    // Check if the value isVote exists in the nested array data
     const userIdExist = (data.map(item => item.votes.filter(item => item )));
     let newVlaue = false;
     for(let key of userIdExist) {
@@ -94,7 +101,6 @@ const Home  = ()=>{
            <div className='col-md-8' style={{float:"right",backgroundColor:"white",padding:"10px"}}>
                
            {
-            
                data.map((item,index)=>{
                    return(
                     
@@ -123,22 +129,15 @@ const Home  = ()=>{
                                 newVlaue ?
                                  <button className="btn disabled" style={{marginLeft:"47px",background:"red"}}>
                                      Already Voted</button> : ""
-                            }
-                           
-                               
-                            
-                             
-                             
+                            }  
                                 </div>    
                             </div>
 
                         </div>
-                   
                    )
                })
            }
          </div> 
- 
         </div>
        </div>
    )

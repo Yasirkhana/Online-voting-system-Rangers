@@ -1,12 +1,14 @@
 import React,{useState,useEffect} from 'react'
+import {url} from '../utils/Url'
 
 
 
 const Posts  = ()=>{
     const [data,setData] = useState([])
   
+    // Fetch all posts from the server and set the data using the result
     useEffect(()=>{
-       fetch('http://localhost:5000/posts',{
+       fetch(url+'posts',{
          
        }).then(res=>res.json())
        .then(result=>{
