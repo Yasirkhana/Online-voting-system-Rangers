@@ -1,0 +1,45 @@
+.posts {
+  width: 207px;
+  height: 200px;
+  border: 1px solid grey;
+  margin-left: 10px;
+  float: left;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 15px;
+}
+
+.posts p {
+  text-align: center;
+}
+
+.posts img {
+  height: 130px;
+  width: 140px;
+  margin-left: 31px;
+  border-radius: 10%;
+}
+
+.home {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .posts {
+  width: 150px;
+  height: 150px;
+  border: 1px solid grey;
+  margin-left: 10px;
+  float: left;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 15px;
+  }
+  .posts img {
+    height: 70px;
+    width: 80px;
+    margin-left: 31px;
+    border-radius: 10%;
+  }
+}

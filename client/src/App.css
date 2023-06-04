@@ -23,3 +23,8 @@ button{
 .card{
   background-color: rgb(102, 160, 253);
 }
+.card {
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
