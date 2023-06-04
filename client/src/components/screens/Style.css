@@ -38,11 +38,19 @@
   text-align: center;
 }
 
-.card img {
+.Profile_img {
   height: 140px;
   width: 140px;
   border-radius: 50%;
-  margin-left: 27%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.Profile_img {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  margin: auto;
   margin-bottom: 10px;
 }
 
@@ -53,6 +61,15 @@
 
 
 
+@media only screen and (max-width: 1000px) {
+  .Profile_img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-left: 12%;
+    margin-bottom: 5px;
+  }
+}
 
 
 
@@ -81,7 +98,7 @@
     border-radius: 10%;
   }
  
-  .card img {
+  .Profile_img {
     height: 100px;
     width: 100px;
     border-radius: 50%;

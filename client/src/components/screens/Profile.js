@@ -16,7 +16,7 @@ const Profile = () => {
           <p>
             <b>{userInfor.firstname}</b>
           </p>
-          <img src={userInfor.pic} alt="Profile" />
+          <img className="Profile_img" src={userInfor.pic} alt="Profile" />
           <p>
             <b>Name :</b> {userInfor.firstname} {userInfor.lastname}
           </p>

@@ -59,8 +59,9 @@ const SignIn = () => {
   };
 
   return (
-    <div className="mycard" style={{ width: '80%', margin: '20px', paddingTop: '5%' }}>
-      <p>
+    <div className="mycard" style={{ width: '80%', margin: '20px', paddingTop: '2%' }}>
+      <h4>VOTING FOR THE BEST UNIVERSITY FOR COMPUTER SCIENCE</h4>
+      <p> 
         <b style={{ marginLeft: '5%', fontSize: '24px' }}></b>
       </p>
       <div className="row">
@@ -73,7 +74,7 @@ const SignIn = () => {
             style={{
               paddingLeft: '40px',
               paddingRight: '40px',
-              paddingTop: '20px',
+              paddingTop: '10px',
               border: '1px solid blue',
             }}
           >
@@ -140,7 +141,7 @@ const SignIn = () => {
                 textAlign: 'center',
                 fontSize: '17px',
                 fontWeight: '500',
-                marginTop: '20px',
+                marginTop: '10px',
               }}
             >
               Not registered? <Link to="/signup">Register here</Link>
