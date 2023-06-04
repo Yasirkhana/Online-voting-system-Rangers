@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import Chart from "./Chart";
 import Profile from "./Profile";
 import {url} from '../utils/Url'
-
+import './Home.css'
 
 const Home  = ()=>{
     const [data,setData] = useState([])
@@ -93,8 +93,8 @@ const Home  = ()=>{
   
    return (
        <div >
-           <div className="col-md-8" style={{margin:"auto",paddingTop:"5%"}} >
-           <div className='col-md-3' style={{float:"left",border:"1px solid green"}}>
+           <div className="col-md-8 " style={{margin:"auto",marginBottom:"20px" ,textAlign:"center" ,paddingTop:"5%"}} >
+           <div className='col-md-3 BlueBox' style={{float:"left"}}>
             <Profile />
            </div>
             {/* <div className="col-md-2"  style={{border:"2px solid black"}} ></div> */}

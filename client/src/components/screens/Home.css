@@ -1,0 +1,16 @@
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .BlueBox{
+    
+      margin-left: 35%;
+      margin-bottom: 30px;
+    }
+    .VotingBox{
+        margin-bottom: 30px;
+    }
+  }

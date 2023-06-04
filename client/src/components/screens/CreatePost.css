@@ -1,0 +1,57 @@
+.post-table {
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 10%;
+    font-size: 22px;
+  }
+  
+  .post-table th {
+    font-weight: bold;
+  }
+  
+  .symbol-image {
+    width: 150px;
+    height: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .vote-count {
+    font-size: 19px;
+    font-weight: 700;
+  }
+  
+  .total-vote {
+    font-size: 30px;
+    margin-left: 39%;
+    background-color: white;
+    margin-top: 150px;
+  }
+  
+
+
+  
+
+@media only screen and (max-width: 768px) {
+    .post-table {
+        font-size: 15px;
+      }
+
+    .symbol-image {
+        width: 70px;
+        height: 70px;
+      }
+      .post-table th {
+        font-weight: bold;
+        font-size: 15px;
+      }
+      .total-vote {
+        font-size: 15px;
+        margin: 5%;
+        background-color: white;
+        margin-top: 150px;
+      }
+      
+      
+
+  }

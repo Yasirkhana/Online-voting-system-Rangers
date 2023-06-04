@@ -19,7 +19,7 @@ const Posts = () => {
       <p>
         <b>{item && item.title && item.title.split(' ')[0]}</b>
       </p>
-      <img src={item.photo} alt={item.title} />
+      <img className='Profile_Img' src={item.photo} alt={item.title} />
     </div>
   ));
 

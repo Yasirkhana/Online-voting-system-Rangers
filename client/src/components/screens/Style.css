@@ -25,6 +25,44 @@
   height: auto;
 }
 
+/* 
+ ===============================================================================
+ */
+
+ .card {
+  padding: 10px;
+
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  margin-left: 27%;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 768px) {
   .posts {
   width: 150px;
@@ -41,5 +79,17 @@
     width: 80px;
     margin-left: 31px;
     border-radius: 10%;
+  }
+ 
+  .card img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-left: 12%;
+    margin-bottom: 5px;
+  }
+
+  .BlueBox{
+    margin-left: 30%;
   }
 }
