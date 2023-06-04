@@ -47,8 +47,11 @@ const SignIn = () => {
             classes: '#c62828 red darken-3',
           });
         } else {
+          // Stores the JSON Web Token (JWT) and user data in the browser's local storage.
           localStorage.setItem('jwt', data.token);
           localStorage.setItem('user', JSON.stringify(data.user));
+          
+        // Updates the user state in the application using Redux dispatch and redirects the user to the homepage.
           dispatch({ type: 'USER', payload: data.user });
           history.push('/');
         }

@@ -5,6 +5,8 @@ import './CreatePost.css';
 
 const CretePost = () => {
   const [data, setData] = useState([]);
+  
+// Fetches posts data from the server and sets it in the state variable "data" when the component mounts.
   useEffect(() => {
     fetch(url + 'posts')
       .then((res) => res.json())

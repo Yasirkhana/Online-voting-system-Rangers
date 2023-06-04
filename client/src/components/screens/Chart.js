@@ -23,6 +23,7 @@ const Chart = () => {
                 }
               ]
     )
+    // Fetches all posts from the server and updates the state with the post titles and vote counts.
     useEffect(()=>{
         fetch(url+'allpost',{
             headers:{
@@ -46,6 +47,7 @@ const Chart = () => {
   return (
         <div>
         <div style={{height:"400px",width:"60%",marginBottom:"50px",marginTop:"50px",marginLeft:"20%"}}>
+         {/* Renders a Pie chart component displaying data with a title and legend. */}
           <Pie
             data={statedata}
             options={{

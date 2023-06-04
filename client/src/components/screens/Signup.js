@@ -45,6 +45,7 @@ const SignUp = () => {
         email
       )
     ) {
+      // Displays a toast message with the text "Invalid email" and applies red color styling to the toast.
       M.toast({
         html: 'Invalid email',
         classes: '#c62828 red darken-3',
